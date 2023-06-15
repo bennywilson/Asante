@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Asante.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\000_Projects\0_\UnrealPractice\Asante\Asante\Asante\Intermediate\Build\Win64\x64\AsanteEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.obj"
+"D:\000_Projects\0_\UnrealPractice\Asante\Asante\Asante\Intermediate\Build\Win64\x64\UnrealEditor\Development\Asante\Asante.init.gen.cpp.obj"
+"D:\000_Projects\0_\UnrealPractice\Asante\Asante\Asante\Intermediate\Build\Win64\x64\UnrealEditor\Development\Asante\AsanteGameModeBase.gen.cpp.obj"
+"D:\000_Projects\0_\UnrealPractice\Asante\Asante\Asante\Intermediate\Build\Win64\x64\UnrealEditor\Development\Asante\Asante.cpp.obj"
+"D:\000_Projects\0_\UnrealPractice\Asante\Asante\Asante\Intermediate\Build\Win64\x64\UnrealEditor\Development\Asante\AsanteGameModeBase.cpp.obj"
+"D:\000_Projects\0_\UnrealPractice\Asante\Asante\Asante\Intermediate\Build\Win64\x64\UnrealEditor\Development\Asante\Default.rc2.res"
+/OUT:"D:\000_Projects\0_\UnrealPractice\Asante\Asante\Asante\Intermediate\Build\Win64\x64\UnrealEditor\Development\Asante\UnrealEditor-Asante.lib"

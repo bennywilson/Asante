@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\000_projects\\0_\\unrealpractice\\asante\\asante\\asante\\source\\asante\\asantegamemodebase.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\000_projects\\0_\\unrealpractice\\asante\\asante\\asante\\intermediate\\build\\win64\\x64\\asanteeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "d:\\000_projects\\0_\\unrealpractice\\asante\\asante\\asante\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\asante\\definitions.asante.h",
+            "d:\\000_projects\\0_\\unrealpractice\\asante\\asante\\asante\\source\\asante\\asantegamemodebase.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\000_projects\\0_\\unrealpractice\\asante\\asante\\asante\\intermediate\\build\\win64\\unrealeditor\\inc\\asante\\uht\\asantegamemodebase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

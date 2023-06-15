@@ -1,0 +1,42 @@
+[
+	{
+		"file": "D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\Source\\Asante\\Asante.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\.vscode\\compileCommands_Asante\\Asante.261.rsp"
+		],
+		"directory": "D:\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\Source\\Asante\\Asante.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\.vscode\\compileCommands_Asante\\Asante.261.rsp"
+		],
+		"directory": "D:\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\Source\\Asante\\Asante.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\.vscode\\compileCommands_Asante\\Asante.261.rsp"
+		],
+		"directory": "D:\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\Source\\Asante\\AsanteGameModeBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\.vscode\\compileCommands_Asante\\Asante.261.rsp"
+		],
+		"directory": "D:\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\Source\\Asante\\AsanteGameModeBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\000_Projects\\0_\\UnrealPractice\\Asante\\Asante\\Asante\\.vscode\\compileCommands_Asante\\Asante.261.rsp"
+		],
+		"directory": "D:\\UE_5.2\\Engine\\Source"
+	}
+]
