@@ -1,13 +1,16 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.2",
+	"EngineAssociation": "{F9141B8A-47CD-987B-2206-B5893D5B0892}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
 		{
 			"Name": "Asante",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
 	],
 	"Plugins": [
