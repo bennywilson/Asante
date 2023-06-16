@@ -3,17 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
-#include "AsantePawn.generated.h"
+#include "GameFramework/Character.h"
+#include "AsanteCharacter.generated.h"
 
 UCLASS()
-class ASANTE_API AAsantePawn : public APawn
+class ASANTE_API AAsanteCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 
-	AAsantePawn();
+	AAsanteCharacter();
 
 protected:
 

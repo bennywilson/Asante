@@ -1,10 +1,10 @@
 // Asante 2023
 
 
-#include "AsantePawn.h"
+#include "AsanteCharacter.h"
 
 // Sets default values
-AAsantePawn::AAsantePawn()
+AAsanteCharacter::AAsanteCharacter()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -19,21 +19,21 @@ AAsantePawn::AAsantePawn()
 }
 
 // Called when the game starts or when spawned
-void AAsantePawn::BeginPlay()
+void AAsanteCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
 // Called every frame
-void AAsantePawn::Tick(float DeltaTime)
+void AAsanteCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
 // Called to bind functionality to input
-void AAsantePawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AAsanteCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
