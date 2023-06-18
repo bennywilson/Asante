@@ -32,6 +32,8 @@ AAsanteProjectile::AAsanteProjectile()
 
     // Create Static Mesh Component
     StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh"));
+    StaticMesh->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
+    StaticMesh->SetupAttachment(RootComponent);
     
     // Die after 3 seconds by default
     InitialLifeSpan = 3.0f;
