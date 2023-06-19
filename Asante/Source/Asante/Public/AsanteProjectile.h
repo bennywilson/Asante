@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 #include "AsanteProjectile.generated.h"
 
 UCLASS()
@@ -37,5 +39,9 @@ protected:
 	/** Static Mesh component */
 	UPROPERTY(Category = StaticMeshActor, VisibleAnywhere, BlueprintReadOnly, meta = (ExposeFunctionCategories = "Mesh,Rendering,Physics,Components|StaticMesh", AllowPrivateAccess = "true"))	
 		UStaticMeshComponent *StaticMesh;
+
+	/**Niagara Particle System Component*/
+	UPROPERTY(Category = ParticleSystem, VisibleAnywhere, BlueprintReadOnly)
+		UNiagaraComponent* NiagaraComponent;
 
 };
