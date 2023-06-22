@@ -28,6 +28,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
+	/*Projectile OnHit*/
+	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+
 	/** Sphere collision component */
 	UPROPERTY(VisibleDefaultsOnly, Category=Projectile)
 	USphereComponent* CollisionComp;
@@ -43,5 +46,6 @@ protected:
 	/**Niagara Particle System Component*/
 	UPROPERTY(Category = ParticleSystem, VisibleAnywhere, BlueprintReadOnly)
 		UNiagaraComponent* NiagaraComponent;
+
 
 };
