@@ -3,17 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AsanteCharacterBase.h"
 #include "GameFramework/Character.h"
 #include "AsanteCharacter.generated.h"
 
-UCLASS()
-class ASANTE_API AAsanteCharacter : public ACharacter
+UCLASS(Blueprintable)
+class ASANTE_API AAsanteCharacter : public AAsanteCharacterBase
 {
 	GENERATED_BODY()
 
 public:
-
-	AAsanteCharacter();
+	AAsanteCharacter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
 protected:
 

@@ -3,11 +3,9 @@
 
 #include "AsanteCharacter.h"
 
-// Sets default values
-AAsanteCharacter::AAsanteCharacter()
+AAsanteCharacter::AAsanteCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	Health = HealthMax = 100.f;
 }
 
 // Called when the game starts or when spawned
