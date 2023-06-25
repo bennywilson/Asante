@@ -13,7 +13,7 @@ AAsanteProjectile::AAsanteProjectile()
     CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
     CollisionComp->InitSphereRadius(5.0f);
     CollisionComp->BodyInstance.SetCollisionProfileName("Projectile");
-    CollisionComp->OnComponentHit.AddDynamic(this, AAsanteProjectile::OnHit);        // set up a notification for when this component hits something blocking
+    CollisionComp->OnComponentHit.AddDynamic(this, &AAsanteProjectile::OnHit);        // set up a notification for when this component hits something blocking
 
     // Players can't walk on it
     CollisionComp->SetWalkableSlopeOverride(FWalkableSlopeOverride(WalkableSlope_Unwalkable, 0.f));
@@ -60,8 +60,8 @@ void AAsanteProjectile::Tick(float DeltaTime)
 
 void AAsanteProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-   int someIntVar;
-   float someFloatVar;
+   int someIntVar = 0;
+   float someFloatVar = 0.0;
 
    UE_LOG(LogTemp, Log, TEXT("Writing out an int %d and an  float %d"), someIntVar, someFloatVar);
 }
