@@ -30,7 +30,6 @@ public:
 	
 	virtual bool GetCanBeHealed(AActor* Source) const;
 	virtual float Heal(float Healing, AActor* Source);
-
-	virtual bool GetCanBeHurt(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) const;
+	
 	virtual float Hurt(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
 };
