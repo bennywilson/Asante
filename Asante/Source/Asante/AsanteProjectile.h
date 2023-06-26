@@ -53,9 +53,9 @@ protected:
 	UPROPERTY(Category = StaticMeshActor, VisibleAnywhere, BlueprintReadOnly, meta = (ExposeFunctionCategories = "Mesh,Rendering,Physics,Components|StaticMesh", AllowPrivateAccess = "true"))	
 	UStaticMeshComponent *StaticMesh;
 
-	/**Niagara Particle System Component*/
+	/**Niagara Explosion Particle System Component*/
 	UPROPERTY(Category = ParticleSystem, VisibleAnywhere, BlueprintReadOnly)
-	UNiagaraComponent* NiagaraComponent;
+	UNiagaraComponent* ExplosionFX;
 
 
 };

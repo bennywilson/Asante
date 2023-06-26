@@ -39,9 +39,9 @@ AAsanteProjectile::AAsanteProjectile()
     StaticMesh->SetupAttachment(RootComponent);
 
     // Create Niagara Particle Component
-    NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
-    NiagaraComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
-    NiagaraComponent->SetupAttachment(RootComponent);
+    ExplosionFX = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
+    ExplosionFX->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
+    ExplosionFX->SetupAttachment(RootComponent);
     
     // Die after 3 seconds by default
     InitialLifeSpan = 3.0f;
