@@ -109,6 +109,7 @@ void AAsanteProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, 
 	// Don't hit friendlies.
 	if (const auto CombatUnit = Cast<IAsanteCombatInterface>(OtherActor))
 	{
+		UE_LOG(LogTemp, Error, TEXT("Hit Ids = %d %d"), CombatUnit->GetTeamId(), GetOwnerTeamId());
 		if (CombatUnit->GetTeamId() == GetOwnerTeamId())
 			return;
 	}
