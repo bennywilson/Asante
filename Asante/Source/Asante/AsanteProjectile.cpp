@@ -3,6 +3,9 @@
 
 #include "AsanteProjectile.h"
 
+#include "AsanteCombatInterface.h"
+#include "Kismet/GameplayStatics.h"
+
 // Sets default values
 AAsanteProjectile::AAsanteProjectile()
 {
@@ -42,6 +45,7 @@ AAsanteProjectile::AAsanteProjectile()
     
     // Die after 3 seconds by default
     InitialLifeSpan = 3.0f;
+	BaseDamage = 25.f;
 }
 
 // Called when the game starts or when spawned
@@ -58,11 +62,60 @@ void AAsanteProjectile::Tick(float DeltaTime)
 
 }
 
+int32 AAsanteProjectile::GetOwnerTeamId() const
+{
+	if (const auto CombatOwner = Cast<IAsanteCombatInterface>(GetOwner()))
+		return CombatOwner->GetTeamId();
+
+	return -1;
+}
+
+int32 AAsanteProjectile::GetTeamId() const
+{
+	return GetOwnerTeamId();
+}
+
+bool AAsanteProjectile::GetIsTargetable() const
+{
+	return false;
+}
+
+float AAsanteProjectile::GetHealth() const
+{
+	return 0.f;
+}
+
+float AAsanteProjectile::GetHealthMax() const
+{
+	return 0.f;
+}
+
+void AAsanteProjectile::SetHealth(float Value)
+{
+}
+
+void AAsanteProjectile::SetHealthMax(float Value)
+{
+}
+
+void AAsanteProjectile::Splode()
+{
+	BP_OnSplode();
+	Destroy();
+}
+
 void AAsanteProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIdx, bool sweep, const FHitResult& Hit)
 {
-   int someIntVar = 0;
-   float someFloatVar = 0.0;
+	// Don't hit friendlies.
+	if (const auto CombatUnit = Cast<IAsanteCombatInterface>(OtherActor))
+	{
+		if (CombatUnit->GetTeamId() == GetOwnerTeamId())
+			return;
+	}
 
-   UE_LOG(LogTemp, Log, TEXT("Writing out an int %d and an  float %d"), someIntVar, someFloatVar);
+	UE_LOG(LogTemp, Error, TEXT("Projectile %s is hitting %s comp %s!"), *GetNameSafe(this), *GetNameSafe(OtherActor), *GetNameSafe(OtherComp));
+
+	UGameplayStatics::ApplyDamage(OtherActor, BaseDamage, GetInstigatorController(), this, nullptr); // TODO: Damage type class maybe?
+	Splode();
 }
 

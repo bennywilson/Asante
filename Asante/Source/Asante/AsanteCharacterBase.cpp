@@ -7,6 +7,7 @@ AAsanteCharacterBase::AAsanteCharacterBase(const FObjectInitializer& ObjectIniti
 {
 	PrimaryActorTick.bCanEverTick = true;
 	Health = HealthMax = 1;
+	TeamId = 0;
 }
 
 float AAsanteCharacterBase::GetHealth() const
@@ -22,6 +23,11 @@ float AAsanteCharacterBase::GetHealthMax() const
 float AAsanteCharacterBase::GetHealthRatio() const
 {
 	return IAsanteCombatInterface::GetHealthRatio();
+}
+
+int32 AAsanteCharacterBase::GetTeamId() const
+{
+	return TeamId;
 }
 
 float AAsanteCharacterBase::Hurt(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
@@ -55,7 +61,16 @@ float AAsanteCharacterBase::Heal(float Healing, AActor* Source)
 bool AAsanteCharacterBase::ShouldTakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator,
 	AActor* DamageCauser) const
 {
-	return Super::ShouldTakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	if (!Super::ShouldTakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser))
+		return false;
+
+	if (const auto CombatUnit = Cast<IAsanteCombatInterface>(DamageCauser))
+		return CombatUnit->GetTeamId() != GetTeamId();
+	
+	if (const auto CombatUnit = Cast<IAsanteCombatInterface>(EventInstigator))
+		return CombatUnit->GetTeamId() != GetTeamId();
+
+	return true;
 }
 
 float AAsanteCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent,

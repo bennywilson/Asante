@@ -30,6 +30,9 @@ public:
 	UFUNCTION(BlueprintPure)
 	virtual float GetHealthRatio() const override;
 
+	UFUNCTION(BlueprintPure)
+	virtual int32 GetTeamId() const override;
+
 	UFUNCTION(BlueprintCallable)
 	virtual float Hurt(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
@@ -39,11 +42,14 @@ public:
 	virtual bool ShouldTakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) const override;
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 protected:
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Stats")
 	float Health;
 	
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Stats")
 	float HealthMax;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Stats")
+	int32 TeamId;
 
 	virtual void OnDeath();
 
