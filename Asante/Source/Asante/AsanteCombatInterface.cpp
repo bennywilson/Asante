@@ -1,6 +1,5 @@
 #include "AsanteCombatInterface.h"
 
-
 UAsanteCombatInterface::UAsanteCombatInterface(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 IAsanteCombatInterface::IAsanteCombatInterface() {}
 
@@ -37,8 +36,9 @@ float IAsanteCombatInterface::Heal(float Healing, AActor* Source)
 float IAsanteCombatInterface::Hurt(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
 	AActor* DamageCauser)
 {
-	const float PreviousHealth = GetHealth();
+	const float PreviousHealth = GetHealth(); 
 	SetHealth(FMath::Max(0.f, GetHealth() - DamageAmount));
+
 	return PreviousHealth - GetHealth();
 }
 

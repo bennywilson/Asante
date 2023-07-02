@@ -13,5 +13,5 @@ UCLASS()
 class ASANTE_API AAsanteGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
 };
