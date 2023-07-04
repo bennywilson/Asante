@@ -38,11 +38,6 @@ AAsanteProjectile::AAsanteProjectile()
     StaticMesh->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
     StaticMesh->SetupAttachment(RootComponent);
 
-    // Create Niagara Particle Component
-    ExplosionFX = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
-    ExplosionFX->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
-    ExplosionFX->SetupAttachment(RootComponent);
-    
     // Die after 3 seconds by default
     InitialLifeSpan = 3.0f;
 	BaseDamage = 25.f;
@@ -109,12 +104,9 @@ void AAsanteProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, 
 	// Don't hit friendlies.
 	if (const auto CombatUnit = Cast<IAsanteCombatInterface>(OtherActor))
 	{
-		UE_LOG(LogTemp, Error, TEXT("Hit Ids = %d %d"), CombatUnit->GetTeamId(), GetOwnerTeamId());
 		if (CombatUnit->GetTeamId() == GetOwnerTeamId())
 			return;
 	}
-
-	UE_LOG(LogTemp, Error, TEXT("Projectile %s is hitting %s comp %s!"), *GetNameSafe(this), *GetNameSafe(OtherActor), *GetNameSafe(OtherComp));
 
 	UGameplayStatics::ApplyDamage(OtherActor, BaseDamage, GetInstigatorController(), this, nullptr); // TODO: Damage type class maybe?
 	Splode();
