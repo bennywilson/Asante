@@ -57,5 +57,7 @@ protected:
 	UPROPERTY(Category = ParticleSystem, VisibleAnywhere, BlueprintReadOnly)
 	UNiagaraComponent* ExplosionFX;
 
-
+	/**Launch sound*/
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TSubclassOf<USoundWave> LaunchSound;
 };
