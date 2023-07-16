@@ -59,5 +59,5 @@ protected:
 
 	/**Launch sound*/
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TSubclassOf<USoundWave> LaunchSound;
+	TObjectPtr<USoundWave> LaunchSound;
 };

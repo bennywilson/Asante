@@ -48,7 +48,7 @@ void AAsanteProjectile::BeginPlay()
 {
 	Super::BeginPlay();
     UWorld* World = GetWorld();
-    UGameplayStatics::PlaySound2D(World, LaunchSound.GetDefaultObject(), 1.0, 1.0);
+    UGameplayStatics::PlaySound2D(World, LaunchSound, 1.0, 1.0);
 }
 
 // Called every frame
